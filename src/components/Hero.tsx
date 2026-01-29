@@ -247,7 +247,7 @@ export function Hero() {
             </h1>
 
             <p className="text-base sm:text-xl md:text-2xl text-white/80 max-w-xl mb-6 sm:mb-8 leading-relaxed">
-              Seu canal de fitness com dicas práticas, sem enrolação e sem extremismos. Vem treinar comigo!
+              Treino, nutrição e motivação. Direto, sem enrolação.
             </p>
 
             {/* Social CTA Buttons - smaller on mobile */}

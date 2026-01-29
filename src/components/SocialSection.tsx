@@ -16,7 +16,7 @@ const socials = [
   {
     name: 'YouTube',
     icon: Youtube,
-    description: 'Vídeos completos sobre treino, nutrição e suplementação.',
+    description: 'Vídeos completos. Treino, nutrição, suplementação.',
     cta: 'Inscreva-se',
     href: URLS.youtube,
     gradient: 'from-red-600 to-red-500',
@@ -25,7 +25,7 @@ const socials = [
   {
     name: 'Instagram',
     icon: Instagram,
-    description: 'Dicas rápidas, bastidores e interação diária.',
+    description: 'Dicas rápidas. Bastidores. Todo dia.',
     cta: 'Seguir',
     href: URLS.instagram,
     gradient: 'from-purple-500 via-pink-500 to-orange-500',
@@ -34,7 +34,7 @@ const socials = [
   {
     name: 'TikTok',
     icon: TikTokIcon,
-    description: 'Conteúdo curto e direto ao ponto. Treino em 60 segundos.',
+    description: 'Treino em 60 segundos. Direto ao ponto.',
     cta: 'Seguir',
     href: URLS.tiktok,
     gradient: 'from-cyan-400 via-white to-pink-500',
@@ -57,14 +57,14 @@ export function SocialSection() {
           className="text-center mb-16"
         >
           <span className="text-fitness-red font-bold text-sm uppercase tracking-widest mb-4 block">
-            Redes Sociais
+            Redes
           </span>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-[0.95] mb-6">
             SIGA O<br />
             <span className="text-fitness-red">MR. TREINO</span>
           </h2>
           <p className="text-xl text-white/70 max-w-2xl mx-auto">
-            Escolha sua plataforma favorita e venha fazer parte da comunidade!
+            Escolhe a plataforma. Entra na comunidade.
           </p>
         </motion.div>
 

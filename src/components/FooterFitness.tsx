@@ -60,7 +60,7 @@ export function FooterFitness() {
         <div className="mt-8 pt-8 border-t border-white/10 text-center">
           <p className="text-white/40 text-sm">
             © {new Date().getFullYear()} Mr. Treino. Todos os direitos reservados. 
-            <span className="text-fitness-red ml-2">💪 Bora treinar!</span>
+            <span className="text-fitness-red ml-2">💪 Bora.</span>
           </p>
         </div>
       </div>

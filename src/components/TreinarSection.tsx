@@ -48,12 +48,11 @@ export function TreinarSection() {
               <span className="text-fitness-red">É A RESPOSTA</span>
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-white/70 mb-6 sm:mb-8 leading-relaxed">
-              Não importa o dia, o humor ou a desculpa. <strong className="text-white">Treinar</strong> é o que move você pra frente. 
-              Força, saúde e disposição não caem do céu — elas vêm da consistência.
+              Dia ruim, desculpa, preguiça — <strong className="text-white">treinar</strong> é o que te move. 
+              Força e disposição vêm da consistência, não do céu.
             </p>
             <p className="text-sm sm:text-base md:text-lg text-white/60 mb-8 sm:mb-10 leading-relaxed">
-              O Mr. Treino está aqui pra te lembrar: cada sessão conta. Cada repetição. Cada escolha. 
-              <strong className="text-white"> Bora treinar!</strong>
+              Cada sessão conta. Cada repetição. Cada escolha.
             </p>
 
             {/* Highlights */}

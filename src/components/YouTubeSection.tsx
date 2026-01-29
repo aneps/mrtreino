@@ -28,7 +28,7 @@ export function YouTubeSection() {
             <div className="inline-flex items-center gap-2 bg-fitness-red/20 border border-fitness-red/50 rounded-full px-4 py-2 mb-6">
               <Youtube className="w-5 h-5 text-fitness-red" />
               <span className="text-fitness-red font-semibold text-sm uppercase tracking-wider">
-                Canal Principal
+                Onde Tudo Rola
               </span>
             </div>
 
@@ -38,8 +38,7 @@ export function YouTubeSection() {
             </h2>
             
             <p className="text-base sm:text-lg md:text-xl text-white/70 mb-6 sm:mb-8 leading-relaxed">
-              O YouTube é onde a mágica acontece! Vídeos completos sobre treino, 
-              nutrição, suplementação e muito mais. Tudo <strong className="text-white">100% gratuito</strong>.
+              Vídeos completos: treino, nutrição, suplementação. Tudo <strong className="text-white">grátis</strong>.
             </p>
 
             {/* Stats */}

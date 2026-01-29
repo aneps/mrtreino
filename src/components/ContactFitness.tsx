@@ -36,7 +36,7 @@ export function ContactFitness() {
             <div className="inline-flex items-center gap-2 bg-fitness-red/20 border border-fitness-red/50 rounded-full px-4 py-2 mb-6">
               <Sparkles className="w-4 h-4 text-fitness-red" />
               <span className="text-fitness-red font-semibold text-sm uppercase tracking-wider">
-                Vem Treinar Comigo!
+                100% Gratuito
               </span>
             </div>
 
@@ -45,7 +45,7 @@ export function ContactFitness() {
               <span className="text-fitness-red">COMEÇAR?</span>
             </h2>
             <p className="text-xl text-white/70 max-w-2xl mx-auto mb-12">
-              Se inscreva no canal e faça parte da maior comunidade de fitness sem frescura do Brasil!
+              Inscreve no canal. Conteúdo toda semana. Zero frescura.
             </p>
           </motion.div>
 

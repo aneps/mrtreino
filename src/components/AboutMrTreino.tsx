@@ -8,22 +8,22 @@ const values = [
   {
     icon: Heart,
     title: 'Sem Extremismos',
-    description: 'Fitness é estilo de vida, não obsessão. Equilíbrio é a chave.',
+    description: 'Estilo de vida, não obsessão. Equilíbrio.',
   },
   {
     icon: Target,
     title: 'Baseado em Ciência',
-    description: 'Conteúdo fundamentado em estudos, não em achismos.',
+    description: 'Ciência, não achismo.',
   },
   {
     icon: Users,
     title: 'Para Todos',
-    description: 'Do iniciante ao avançado, todo mundo é bem-vindo.',
+    description: 'Iniciante ou avançado, todo mundo entra.',
   },
   {
     icon: Sparkles,
     title: 'Sem Frescura',
-    description: 'Direto ao ponto, sem enrolação. Tempo é precioso.',
+    description: 'Direto ao ponto. Sem enrolação.',
   },
 ]
 
@@ -72,12 +72,11 @@ export function AboutMrTreino() {
               <span className="text-fitness-red">BOLSO</span>
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-white/70 mb-6 sm:mb-8 leading-relaxed">
-              O Mr. Treino é um canal de conteúdo fitness focado em <strong className="text-white">educação, motivação e entretenimento</strong>. 
-              Aqui você aprende sobre treino, nutrição e suplementação de forma leve, divertida e sem toxicidade.
+              Canal de fitness: <strong className="text-white">treino, nutrição, suplementação</strong>. 
+              Conteúdo que presta, sem papo furado.
             </p>
             <p className="text-sm sm:text-base md:text-lg text-white/60 mb-8 sm:mb-10 leading-relaxed">
-              Nada de vender sonhos impossíveis ou dietas malucas. O objetivo é te ajudar a construir 
-              uma vida fitness <strong className="text-white">sustentável e prazerosa</strong>.
+              Sem promessa milagrosa. Sem dieta maluca. Só o que funciona pra você evoluir de verdade.
             </p>
 
             {/* Values Grid */}
