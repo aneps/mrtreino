@@ -50,7 +50,7 @@ export function YouTubeSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-white/5 border border-white/10 rounded-xl p-4 text-center"
+                  className="bg-white/5 border border-white/10 rounded-xl p-3 sm:p-4 text-center"
                 >
                   <stat.icon className="w-6 h-6 text-fitness-red mx-auto mb-2" />
                   <div className="text-lg font-black text-white">{stat.value}</div>
@@ -67,7 +67,7 @@ export function YouTubeSection() {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-fitness-red text-white font-bold text-lg px-8 py-4 rounded-full hover:bg-red-600 transition-all flex items-center gap-3 shadow-2xl shadow-red-500/30"
+                className="bg-fitness-red text-white font-bold text-sm sm:text-lg px-5 py-3 sm:px-8 sm:py-4 rounded-full hover:bg-red-600 transition-all flex items-center gap-2 sm:gap-3 shadow-2xl shadow-red-500/30"
               >
                 <Youtube className="w-6 h-6" />
                 INSCREVA-SE AGORA
@@ -79,7 +79,7 @@ export function YouTubeSection() {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white font-bold text-lg px-8 py-4 rounded-full hover:bg-white/20 transition-all flex items-center gap-3"
+                className="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white font-bold text-sm sm:text-lg px-5 py-3 sm:px-8 sm:py-4 rounded-full hover:bg-white/20 transition-all flex items-center gap-2 sm:gap-3"
               >
                 <Bell className="w-5 h-5" />
                 ATIVAR NOTIFICAÇÕES

@@ -1,28 +1,29 @@
 # Mr. Treino
 
-Programas de treino científicos para ganho muscular. Transforme seu corpo com o método Mr. Treino.
+Site do canal Mr. Treino — conteúdo fitness sobre treino, nutrição e motivação. Landing page com vídeo hero, seções sobre o canal, conteúdo do YouTube e tópicos de aprendizado.
 
-## Tecnologias
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## Desenvolvimento local
+## Instalação
 
 ```sh
-# Instalar dependências
-npm i
-
-# Iniciar servidor de desenvolvimento
-npm run dev
+npm install
 ```
 
-## Scripts
+## Rodar
 
-- `npm run dev` - Inicia o servidor de desenvolvimento
-- `npm run build` - Build para produção
-- `npm run preview` - Preview do build de produção
-- `npm run lint` - Executa o linter
+```sh
+# Desenvolvimento (http://localhost:8080)
+npm run dev
+
+# Build para produção
+npm run build
+
+# Preview do build
+npm run preview
+
+# Deploy no Firebase
+npm run deploy
+```
+
+## Stack
+
+React, TypeScript, Vite, Tailwind CSS, shadcn/ui, Framer Motion, Firebase

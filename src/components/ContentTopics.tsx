@@ -45,7 +45,7 @@ const topics = [
 
 export function ContentTopics() {
   return (
-    <section id="aprenda" className="relative py-24 bg-gradient-to-b from-zinc-900 to-black overflow-hidden">
+    <section id="aprenda" className="relative py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-zinc-900 to-black overflow-hidden">
       {/* Decorative Elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-fitness-red/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/5 rounded-full blur-3xl" />
@@ -62,11 +62,11 @@ export function ContentTopics() {
             <span className="text-fitness-red font-bold text-sm uppercase tracking-widest mb-4 block">
               O Que Você Vai Aprender
             </span>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-[0.95] mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[0.95] mb-4 sm:mb-6">
               CONTEÚDO<br />
               <span className="text-fitness-red">DE VERDADE</span>
             </h2>
-            <p className="text-xl text-white/70 max-w-xl">
+            <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-xl">
               Temas que realmente importam para quem quer evoluir no fitness. 
               Sem fórmulas mágicas, sem promessas falsas.
             </p>
@@ -107,7 +107,7 @@ export function ContentTopics() {
               transition={{ delay: index * 0.1 }}
               className="group"
             >
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 h-full transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:scale-[1.02]">
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 sm:p-6 h-full transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:scale-[1.02]">
                 <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${topic.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                   <topic.icon className="w-7 h-7 text-white" />
                 </div>
