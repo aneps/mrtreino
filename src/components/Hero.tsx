@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Menu, X, Youtube, Instagram } from 'lucide-react'
+import { Menu, X, Youtube, Instagram, Volume2, VolumeX } from 'lucide-react'
 import { useState, useRef, useEffect } from 'react'
 import mrTreinoLogo from '../assets/mr-treino-logo.png'
 import { URLS } from '../lib/constants'
@@ -17,7 +17,9 @@ export function Hero() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isVideoLoaded, setIsVideoLoaded] = useState(false)
+  const [isMuted, setIsMuted] = useState(true)
   const videoRef = useRef<HTMLVideoElement>(null)
+  const audioRef = useRef<HTMLAudioElement>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,6 +43,17 @@ export function Hero() {
     return () => { document.body.style.overflow = 'unset' }
   }, [isMobileMenuOpen])
 
+  useEffect(() => {
+    if (!audioRef.current) return
+    if (isMuted) {
+      audioRef.current.pause()
+    } else {
+      audioRef.current.volume = 0.7
+      audioRef.current.loop = true
+      audioRef.current.play().catch(console.error)
+    }
+  }, [isMuted])
+
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
     setIsMobileMenuOpen(false)
@@ -48,6 +61,9 @@ export function Hero() {
 
   return (
     <div className="relative h-screen w-full overflow-hidden bg-black">
+      {/* Background Audio - plays when unmuted */}
+      <audio ref={audioRef} src="/audio.mp3" preload="auto" />
+
       {/* Video Background */}
       <video
         ref={videoRef}
@@ -144,6 +160,13 @@ export function Hero() {
 
             {/* Right Side */}
             <div className="flex items-center gap-3">
+              <button
+                onClick={() => setIsMuted(!isMuted)}
+                className="p-3 rounded-full bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 transition-all"
+                aria-label={isMuted ? 'Ativar som' : 'Desativar som'}
+              >
+                {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
+              </button>
               <motion.a
                 href={URLS.youtubeSubscribe}
                 target="_blank"

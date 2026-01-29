@@ -104,7 +104,7 @@ export function SocialSection() {
         </div>
 
         {/* Logo Badge */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -114,7 +114,7 @@ export function SocialSection() {
             <img src={mrTreinoLogo} alt="Mr. Treino" className="w-12 h-12 rounded-full" />
             <span className="text-white font-bold text-lg">{SOCIAL_HANDLE}</span>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   )
