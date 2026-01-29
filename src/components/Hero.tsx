@@ -1,9 +1,10 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Volume2, VolumeX, Menu, X, Youtube, Instagram } from 'lucide-react'
+import { Menu, X, Youtube, Instagram } from 'lucide-react'
 import { useState, useRef, useEffect } from 'react'
 import mrTreinoLogo from '../assets/mr-treino-logo.png'
+import { URLS } from '../lib/constants'
 
 // TikTok icon component
 const TikTokIcon = ({ className }: { className?: string }) => (
@@ -13,7 +14,6 @@ const TikTokIcon = ({ className }: { className?: string }) => (
 )
 
 export function Hero() {
-  const [isMuted, setIsMuted] = useState(true)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isVideoLoaded, setIsVideoLoaded] = useState(false)
@@ -35,13 +35,6 @@ export function Hero() {
       videoRef.current.play().catch(console.error)
     }
   }, [])
-
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.muted = isMuted
-      videoRef.current.volume = isMuted ? 0 : 0.7
-    }
-  }, [isMuted])
 
   useEffect(() => {
     document.body.style.overflow = isMobileMenuOpen ? 'hidden' : 'unset'
@@ -151,15 +144,8 @@ export function Hero() {
 
             {/* Right Side */}
             <div className="flex items-center gap-3">
-              <button
-                onClick={() => setIsMuted(!isMuted)}
-                className="p-3 rounded-full bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 transition-all"
-              >
-                {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
-              </button>
-              
               <motion.a
-                href="#"
+                href={URLS.youtubeSubscribe}
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
@@ -207,7 +193,7 @@ export function Hero() {
                 </button>
               ))}
               <a
-                href="#"
+                href={URLS.youtubeSubscribe}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-fitness-red text-white font-bold px-6 py-4 rounded-full mt-4 text-center flex items-center justify-center gap-2"
@@ -229,7 +215,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="max-w-3xl"
           >
-            {/* Badge */}
+            {/* Badge
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -240,7 +226,7 @@ export function Hero() {
               <span className="text-fitness-red font-semibold text-sm uppercase tracking-wider">
                 Conteúdo Fitness Gratuito
               </span>
-            </motion.div>
+            </motion.div> */}
 
             {/* Main Title - smaller on mobile */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white leading-[0.9] mb-4 sm:mb-6">
@@ -256,7 +242,7 @@ export function Hero() {
             {/* Social CTA Buttons - smaller on mobile */}
             <div className="flex flex-wrap gap-3 sm:gap-4">
               <motion.a
-                href="#"
+                href={URLS.youtube}
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
@@ -268,7 +254,7 @@ export function Hero() {
               </motion.a>
               
               <motion.a
-                href="#"
+                href={URLS.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
@@ -280,7 +266,7 @@ export function Hero() {
               </motion.a>
               
               <motion.a
-                href="#"
+                href={URLS.tiktok}
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}

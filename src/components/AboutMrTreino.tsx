@@ -53,7 +53,7 @@ export function AboutMrTreino() {
               <img 
                 src={mrTreinoPointing} 
                 alt="Mr. Treino" 
-                className="relative w-full max-w-[200px] sm:max-w-[280px] md:max-w-md mx-auto drop-shadow-2xl scale-[0.7] sm:scale-100 md:scale-[1.5] lg:scale-[2.5] origin-center"
+                className="relative w-full max-w-full sm:max-w-[480px] md:max-w-md mx-auto drop-shadow-2xl md:scale-[1.5] lg:scale-[2.5] origin-center"
               />
             </div>
           </motion.div>

@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { Youtube, Instagram, ArrowUpRight } from 'lucide-react'
 import mrTreinoLogo from '../assets/mr-treino-logo.png'
+import { URLS, SOCIAL_HANDLE } from '../lib/constants'
 
 // TikTok icon component
 const TikTokIcon = ({ className }: { className?: string }) => (
@@ -17,7 +18,7 @@ const socials = [
     icon: Youtube,
     description: 'Vídeos completos sobre treino, nutrição e suplementação.',
     cta: 'Inscreva-se',
-    href: '#',
+    href: URLS.youtube,
     gradient: 'from-red-600 to-red-500',
     hoverBg: 'hover:bg-red-600/20',
   },
@@ -26,7 +27,7 @@ const socials = [
     icon: Instagram,
     description: 'Dicas rápidas, bastidores e interação diária.',
     cta: 'Seguir',
-    href: '#',
+    href: URLS.instagram,
     gradient: 'from-purple-500 via-pink-500 to-orange-500',
     hoverBg: 'hover:bg-pink-500/20',
   },
@@ -35,7 +36,7 @@ const socials = [
     icon: TikTokIcon,
     description: 'Conteúdo curto e direto ao ponto. Treino em 60 segundos.',
     cta: 'Seguir',
-    href: '#',
+    href: URLS.tiktok,
     gradient: 'from-cyan-400 via-white to-pink-500',
     hoverBg: 'hover:bg-white/20',
   },
@@ -111,7 +112,7 @@ export function SocialSection() {
         >
           <div className="flex items-center gap-4 bg-white/5 border border-white/10 rounded-full px-8 py-4">
             <img src={mrTreinoLogo} alt="Mr. Treino" className="w-12 h-12 rounded-full" />
-            <span className="text-white font-bold text-lg">@mrtreino</span>
+            <span className="text-white font-bold text-lg">{SOCIAL_HANDLE}</span>
           </div>
         </motion.div>
       </div>

@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { Youtube, Play, Bell, ThumbsUp, Users } from 'lucide-react'
 import mrTreinoBench from '../assets/mr-treino-bench.png'
+import { URLS } from '../lib/constants'
 
 const stats = [
   { icon: Users, value: 'Crescendo!', label: 'Comunidade' },
@@ -62,7 +63,7 @@ export function YouTubeSection() {
             {/* CTA */}
             <div className="flex flex-wrap gap-4">
               <motion.a
-                href="#"
+                href={URLS.youtubeSubscribe}
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
@@ -74,7 +75,7 @@ export function YouTubeSection() {
               </motion.a>
               
               <motion.a
-                href="#"
+                href={URLS.youtubeSubscribe}
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}

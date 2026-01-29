@@ -2,6 +2,7 @@
 
 import { Youtube, Instagram } from 'lucide-react'
 import mrTreinoLogo from '../assets/mr-treino-logo.png'
+import { URLS } from '../lib/constants'
 
 // TikTok icon component
 const TikTokIcon = ({ className }: { className?: string }) => (
@@ -29,7 +30,7 @@ export function FooterFitness() {
           {/* Social Icons */}
           <div className="flex items-center gap-4">
             <a 
-              href="#" 
+              href={URLS.youtube} 
               target="_blank" 
               rel="noopener noreferrer"
               className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-fitness-red transition-colors"
@@ -37,7 +38,7 @@ export function FooterFitness() {
               <Youtube className="w-5 h-5" />
             </a>
             <a 
-              href="#" 
+              href={URLS.instagram} 
               target="_blank" 
               rel="noopener noreferrer"
               className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-pink-500 transition-colors"
@@ -45,7 +46,7 @@ export function FooterFitness() {
               <Instagram className="w-5 h-5" />
             </a>
             <a 
-              href="#" 
+              href={URLS.tiktok} 
               target="_blank" 
               rel="noopener noreferrer"
               className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-colors"

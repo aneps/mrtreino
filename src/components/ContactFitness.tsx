@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { Youtube, Sparkles } from 'lucide-react'
 import mrTreinoLogo from '../assets/mr-treino-logo.png'
+import { URLS } from '../lib/constants'
 
 export function ContactFitness() {
   return (
@@ -55,7 +56,7 @@ export function ContactFitness() {
             viewport={{ once: true }}
           >
             <motion.a
-              href="#"
+              href={URLS.youtubeSubscribe}
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
