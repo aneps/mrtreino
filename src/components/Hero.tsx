@@ -77,12 +77,12 @@ export function Hero() {
         <source src="/videos/banner.mp4" type="video/mp4" />
       </video>
 
-      {/* Video Loading Overlay - Logo with cool effect */}
+      {/* Video Loading Overlay - Full page, on top of everything */}
       <motion.div
         initial={{ opacity: 1 }}
         animate={{ opacity: isVideoLoaded ? 0 : 1 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className="absolute inset-0 z-30 flex items-center justify-center bg-black pointer-events-none"
+        className={`fixed inset-0 z-[9999] flex items-center justify-center bg-black ${isVideoLoaded ? 'pointer-events-none' : ''}`}
       >
         <motion.div
           animate={{
@@ -96,16 +96,7 @@ export function Hero() {
           className="relative flex flex-col items-center gap-4 sm:gap-6"
         >
           {/* Rotating glow rings - smaller on mobile */}
-          <motion.div
-            animate={{ rotate: 360 }}
-            transition={{ duration: 4, repeat: Infinity, ease: 'linear' }}
-            className="absolute w-28 h-28 sm:w-44 sm:h-44 rounded-full border-2 border-fitness-red/20 border-t-fitness-red"
-          />
-          <motion.div
-            animate={{ rotate: -360 }}
-            transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
-            className="absolute w-24 h-24 sm:w-36 sm:h-36 rounded-full border-2 border-transparent border-b-fitness-red/40"
-          />
+          
           {/* Logo with glow - smaller on mobile */}
           <div className="relative">
             <div className="absolute inset-0 rounded-full bg-fitness-red/30 blur-xl scale-150 animate-pulse" />
@@ -115,9 +106,6 @@ export function Hero() {
               className="relative w-20 h-20 sm:w-28 sm:h-28 rounded-full drop-shadow-2xl ring-4 ring-fitness-red/20"
             />
           </div>
-          <span className="text-white/80 font-bold text-xs sm:text-sm uppercase tracking-widest animate-pulse">
-            Carregando...
-          </span>
         </motion.div>
       </motion.div>
 
