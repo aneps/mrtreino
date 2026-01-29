@@ -1,6 +1,7 @@
 import { Hero } from './components/Hero'
 import { AboutMrTreino } from './components/AboutMrTreino'
 import { YouTubeSection } from './components/YouTubeSection'
+import { TreinarSection } from './components/TreinarSection'
 import { ContentTopics } from './components/ContentTopics'
 import { SocialSection } from './components/SocialSection'
 import { ContactFitness } from './components/ContactFitness'
@@ -13,6 +14,7 @@ export default function App() {
         <Hero />
         <AboutMrTreino />
         <YouTubeSection />
+        <TreinarSection />
         <ContentTopics />
         <SocialSection />
         <ContactFitness />

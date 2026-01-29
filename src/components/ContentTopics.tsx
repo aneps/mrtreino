@@ -78,21 +78,11 @@ export function ContentTopics() {
             viewport={{ once: true }}
             className="flex-shrink-0 hidden lg:block"
           >
-            {/* YouTube TV-style frame */}
-            <div className="relative p-4 sm:p-6 bg-gradient-to-b from-zinc-800 to-zinc-900 rounded-3xl shadow-2xl border border-zinc-700/50 ring-2 ring-zinc-600/30">
-              {/* TV bezel */}
-              <div className="relative rounded-2xl overflow-hidden bg-black shadow-inner ring-1 ring-black/50">
-                {/* Screen reflection */}
-                <div className="absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-white/10 to-transparent rounded-t-2xl pointer-events-none z-10" />
-                <img 
-                  src={mrTreinoGym} 
-                  alt="Mr. Treino na Academia" 
-                  className="w-full max-w-xl aspect-video object-cover"
-                />
-              </div>
-              {/* TV stand */}
-              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-24 h-2 bg-zinc-700 rounded-b-full shadow-lg" />
-            </div>
+            <img 
+              src={mrTreinoGym} 
+              alt="Mr. Treino na Academia" 
+              className="w-full max-w-xl rounded-2xl drop-shadow-2xl object-cover"
+            />
           </motion.div>
         </div>
 

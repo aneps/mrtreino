@@ -131,7 +131,7 @@ export function Hero() {
 
             {/* Desktop Nav */}
             <div className="hidden md:flex items-center gap-8">
-              {['Sobre', 'Conteúdo', 'Aprenda', 'Redes'].map((item) => (
+              {['Sobre', 'Conteúdo', 'Treinar', 'Aprenda', 'Redes'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
@@ -183,7 +183,7 @@ export function Hero() {
             className="fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl z-[105] p-8"
           >
             <div className="flex flex-col gap-6 mt-20">
-              {['Sobre', 'Conteúdo', 'Aprenda', 'Redes'].map((item) => (
+              {['Sobre', 'Conteúdo', 'Treinar', 'Aprenda', 'Redes'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}

@@ -52,7 +52,7 @@ export function AboutMrTreino() {
               <div className="absolute inset-0 bg-fitness-red/20 rounded-full blur-3xl scale-75" />
               <img 
                 src={mrTreinoPointing} 
-                alt="Mr. Treino" 
+                alt="Mr. Treino"
                 className="relative w-full max-w-full sm:max-w-[480px] md:max-w-md mx-auto drop-shadow-2xl md:scale-[1.5] lg:scale-[2.5] origin-center"
               />
             </div>
