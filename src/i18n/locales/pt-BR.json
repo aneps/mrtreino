@@ -1,0 +1,98 @@
+{
+  "language": "Idioma",
+  "ariaLanguage": "Trocar idioma",
+  "nav": {
+    "sobre": "Sobre",
+    "conteudo": "Conteúdo",
+    "treinar": "Treinar",
+    "aprenda": "Aprenda",
+    "redes": "Redes",
+    "inscrevaSe": "INSCREVA-SE"
+  },
+  "hero": {
+    "title1": "TREINO,",
+    "title2": "NUTRIÇÃO &",
+    "title3": "MOTIVAÇÃO",
+    "subtitle": "Direto, sem enrolação.",
+    "watchYouTube": "ASSISTA NO YOUTUBE",
+    "ariaSoundOn": "Ativar som",
+    "ariaSoundOff": "Desativar som"
+  },
+  "loading": {
+    "label": "Carregando..."
+  },
+  "about": {
+    "label": "Quem é o Mr. Treino?",
+    "title": "SEU COACH DE",
+    "titleHighlight": "BOLSO",
+    "p1": "Canal de fitness: <strong>treino, nutrição, suplementação</strong>. Conteúdo que presta, sem papo furado.",
+    "p2": "Sem promessa milagrosa. Sem dieta maluca. Só o que funciona pra você evoluir de verdade.",
+    "values": {
+      "noExtremes": { "title": "Sem Extremismos", "desc": "Estilo de vida, não obsessão. Equilíbrio." },
+      "science": { "title": "Baseado em Ciência", "desc": "Ciência, não achismo." },
+      "forAll": { "title": "Para Todos", "desc": "Iniciante ou avançado, todo mundo entra." },
+      "noFluff": { "title": "Sem Frescura", "desc": "Direto ao ponto. Sem enrolação." }
+    }
+  },
+  "youtube": {
+    "badge": "Onde Tudo Rola",
+    "title": "ASSISTA NO",
+    "titleHighlight": "YOUTUBE",
+    "p": "Vídeos completos: treino, nutrição, suplementação. Tudo <strong>grátis</strong>.",
+    "subscribe": "INSCREVA-SE AGORA",
+    "notifications": "ATIVAR NOTIFICAÇÕES",
+    "stats": {
+      "community": "Comunidade",
+      "videos": "Novos Vídeos",
+      "free": "Gratuito"
+    },
+    "statsValue": { "growing": "Crescendo!", "weekly": "Toda Semana", "percent": "100%" },
+    "videoTitle": "Como Treinar para Ganhar Massa Muscular",
+    "videoSubtitle": "Mr. Treino • Novo vídeo toda semana"
+  },
+  "treinar": {
+    "label": "A Mentalidade",
+    "title": "TREINAR!",
+    "titleHighlight": "É A RESPOSTA",
+    "p1": "Dia ruim, desculpa, preguiça — <strong>treinar</strong> é o que te move. Força e disposição vêm da consistência, não do céu.",
+    "p2": "Cada sessão conta. Cada repetição. Cada escolha.",
+    "energy": "Energia",
+    "focus": "Foco",
+    "health": "Saúde"
+  },
+  "content": {
+    "label": "O Que Rola Aqui",
+    "title": "CONTEÚDO",
+    "titleHighlight": "DE VERDADE",
+    "p": "O que importa pra evoluir. Sem fórmula mágica, sem promessa vazia.",
+    "topics": {
+      "training": { "title": "Treino & Técnica", "desc": "Execução certa. Montagem de treino. Sem erro." },
+      "nutrition": { "title": "Alimentação Saudável", "desc": "Nutrição sem neura. Dieta flexível que funciona." },
+      "supplements": { "title": "Suplementos sem Bullshit", "desc": "O que funciona e o que não. Zero enganação." },
+      "motivation": { "title": "Motivação Realista", "desc": "Consistência bate intensidade. Jogo longo." },
+      "myths": { "title": "Mitos vs Realidade", "desc": "Mentiras do fitness. Desvendadas." },
+      "lifestyle": { "title": "Lifestyle Fitness", "desc": "Fitness na vida real. Sem virar escravo da academia." }
+    }
+  },
+  "social": {
+    "label": "Redes",
+    "title": "SIGA O",
+    "titleHighlight": "MR. TREINO",
+    "p": "Escolhe a plataforma. Entra na comunidade.",
+    "youtube": { "desc": "Vídeos completos. Treino, nutrição, suplementação.", "cta": "Inscreva-se" },
+    "instagram": { "desc": "Dicas rápidas. Bastidores. Todo dia.", "cta": "Seguir" },
+    "tiktok": { "desc": "Treino em 60 segundos. Direto ao ponto.", "cta": "Seguir" }
+  },
+  "contact": {
+    "badge": "100% Gratuito",
+    "title": "BORA",
+    "titleHighlight": "COMEÇAR?",
+    "p": "Inscreve no canal. Conteúdo toda semana. Zero frescura.",
+    "cta": "INSCREVA-SE NO YOUTUBE"
+  },
+  "footer": {
+    "tagline": "Treino, Nutrição & Motivação — Sem frescura, com ciência.",
+    "copyright": "Todos os direitos reservados.",
+    "cta": "Bora."
+  }
+}

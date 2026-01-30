@@ -1,0 +1,98 @@
+{
+  "language": "Language",
+  "ariaLanguage": "Change language",
+  "nav": {
+    "sobre": "About",
+    "conteudo": "Content",
+    "treinar": "Train",
+    "aprenda": "Learn",
+    "redes": "Social",
+    "inscrevaSe": "SUBSCRIBE"
+  },
+  "hero": {
+    "title1": "TRAINING,",
+    "title2": "NUTRITION &",
+    "title3": "MOTIVATION",
+    "subtitle": "Straight up, no fluff.",
+    "watchYouTube": "WATCH ON YOUTUBE",
+    "ariaSoundOn": "Turn sound on",
+    "ariaSoundOff": "Turn sound off"
+  },
+  "loading": {
+    "label": "Loading..."
+  },
+  "about": {
+    "label": "Who is Mr. Treino?",
+    "title": "YOUR POCKET",
+    "titleHighlight": "COACH",
+    "p1": "Fitness channel: <strong>training, nutrition, supplements</strong>. Content that matters, no BS.",
+    "p2": "No miracle promises. No crazy diets. Just what works for real progress.",
+    "values": {
+      "noExtremes": { "title": "No Extremes", "desc": "Lifestyle, not obsession. Balance." },
+      "science": { "title": "Science-Based", "desc": "Science, not bro science." },
+      "forAll": { "title": "For Everyone", "desc": "Beginner or advanced, everyone's in." },
+      "noFluff": { "title": "No Fluff", "desc": "Straight to the point. No filler." }
+    }
+  },
+  "youtube": {
+    "badge": "Where It All Happens",
+    "title": "WATCH ON",
+    "titleHighlight": "YOUTUBE",
+    "p": "Full videos: training, nutrition, supplements. All <strong>free</strong>.",
+    "subscribe": "SUBSCRIBE NOW",
+    "notifications": "TURN ON NOTIFICATIONS",
+    "stats": {
+      "community": "Community",
+      "videos": "New Videos",
+      "free": "Free"
+    },
+    "statsValue": { "growing": "Growing!", "weekly": "Every Week", "percent": "100%" },
+    "videoTitle": "How to Train for Muscle Gain",
+    "videoSubtitle": "Mr. Treino • New video every week"
+  },
+  "treinar": {
+    "label": "The Mindset",
+    "title": "TRAIN!",
+    "titleHighlight": "IS THE ANSWER",
+    "p1": "Bad day, excuse, laziness — <strong>training</strong> is what moves you. Strength and energy come from consistency, not thin air.",
+    "p2": "Every session counts. Every rep. Every choice.",
+    "energy": "Energy",
+    "focus": "Focus",
+    "health": "Health"
+  },
+  "content": {
+    "label": "What's Here",
+    "title": "REAL",
+    "titleHighlight": "CONTENT",
+    "p": "What matters to progress. No magic formula, no empty promises.",
+    "topics": {
+      "training": { "title": "Training & Technique", "desc": "Right execution. Program design. No mistakes." },
+      "nutrition": { "title": "Healthy Eating", "desc": "Nutrition without obsession. Flexible diet that works." },
+      "supplements": { "title": "Supplements, No BS", "desc": "What works and what doesn't. Zero hype." },
+      "motivation": { "title": "Realistic Motivation", "desc": "Consistency beats intensity. Long game." },
+      "myths": { "title": "Myths vs Reality", "desc": "Fitness lies. Debunked." },
+      "lifestyle": { "title": "Fitness Lifestyle", "desc": "Fitness in real life. Without being a gym slave." }
+    }
+  },
+  "social": {
+    "label": "Social",
+    "title": "FOLLOW",
+    "titleHighlight": "MR. TREINO",
+    "p": "Pick your platform. Join the community.",
+    "youtube": { "desc": "Full videos. Training, nutrition, supplements.", "cta": "Subscribe" },
+    "instagram": { "desc": "Quick tips. Behind the scenes. Daily.", "cta": "Follow" },
+    "tiktok": { "desc": "Training in 60 seconds. Straight to the point.", "cta": "Follow" }
+  },
+  "contact": {
+    "badge": "100% Free",
+    "title": "READY",
+    "titleHighlight": "TO START?",
+    "p": "Subscribe to the channel. New content every week. No fluff.",
+    "cta": "SUBSCRIBE ON YOUTUBE"
+  },
+  "footer": {
+    "tagline": "Training, Nutrition & Motivation — No fluff, science-backed.",
+    "copyright": "All rights reserved.",
+    "cta": "Let's go."
+  }
+}

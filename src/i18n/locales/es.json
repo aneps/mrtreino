@@ -1,0 +1,98 @@
+{
+  "language": "Idioma",
+  "ariaLanguage": "Cambiar idioma",
+  "nav": {
+    "sobre": "Sobre",
+    "conteudo": "Contenido",
+    "treinar": "Entrenar",
+    "aprenda": "Aprende",
+    "redes": "Redes",
+    "inscrevaSe": "SUSCRÍBETE"
+  },
+  "hero": {
+    "title1": "ENTRENAMIENTO,",
+    "title2": "NUTRICIÓN &",
+    "title3": "MOTIVACIÓN",
+    "subtitle": "Directo, sin rollos.",
+    "watchYouTube": "MIRA EN YOUTUBE",
+    "ariaSoundOn": "Activar sonido",
+    "ariaSoundOff": "Desactivar sonido"
+  },
+  "loading": {
+    "label": "Cargando..."
+  },
+  "about": {
+    "label": "¿Quién es Mr. Treino?",
+    "title": "TU COACH DE",
+    "titleHighlight": "BOLSILLO",
+    "p1": "Canal de fitness: <strong>entrenamiento, nutrición, suplementos</strong>. Contenido que vale, sin rollo.",
+    "p2": "Sin promesas milagrosas. Sin dietas locas. Solo lo que funciona para evolucionar de verdad.",
+    "values": {
+      "noExtremes": { "title": "Sin Extremos", "desc": "Estilo de vida, no obsesión. Equilibrio." },
+      "science": { "title": "Basado en Ciencia", "desc": "Ciencia, no opinión." },
+      "forAll": { "title": "Para Todos", "desc": "Principiante o avanzado, todos entran." },
+      "noFluff": { "title": "Sin Rollo", "desc": "Directo al grano. Sin relleno." }
+    }
+  },
+  "youtube": {
+    "badge": "Donde Todo Pasa",
+    "title": "MIRA EN",
+    "titleHighlight": "YOUTUBE",
+    "p": "Vídeos completos: entrenamiento, nutrición, suplementos. Todo <strong>gratis</strong>.",
+    "subscribe": "SUSCRÍBETE AHORA",
+    "notifications": "ACTIVAR NOTIFICACIONES",
+    "stats": {
+      "community": "Comunidad",
+      "videos": "Nuevos Vídeos",
+      "free": "Gratis"
+    },
+    "statsValue": { "growing": "¡Creciendo!", "weekly": "Cada Semana", "percent": "100%" },
+    "videoTitle": "Cómo Entrenar para Ganar Masa Muscular",
+    "videoSubtitle": "Mr. Treino • Nuevo vídeo cada semana"
+  },
+  "treinar": {
+    "label": "La Mentalidad",
+    "title": "¡ENTRENAR!",
+    "titleHighlight": "ES LA RESPUESTA",
+    "p1": "Día malo, excusa, pereza — <strong>entrenar</strong> es lo que te mueve. Fuerza y energía vienen de la constancia, no del cielo.",
+    "p2": "Cada sesión cuenta. Cada repetición. Cada elección.",
+    "energy": "Energía",
+    "focus": "Foco",
+    "health": "Salud"
+  },
+  "content": {
+    "label": "Qué Hay Aquí",
+    "title": "CONTENIDO",
+    "titleHighlight": "DE VERDAD",
+    "p": "Lo que importa para evolucionar. Sin fórmula mágica, sin promesas vacías.",
+    "topics": {
+      "training": { "title": "Entrenamiento & Técnica", "desc": "Ejecución correcta. Diseño de rutina. Sin errores." },
+      "nutrition": { "title": "Alimentación Saludable", "desc": "Nutrición sin obsesión. Dieta flexible que funciona." },
+      "supplements": { "title": "Suplementos sin Rollo", "desc": "Lo que funciona y lo que no. Cero engaño." },
+      "motivation": { "title": "Motivación Realista", "desc": "Constancia gana a intensidad. Juego largo." },
+      "myths": { "title": "Mitos vs Realidad", "desc": "Mentiras del fitness. Desmontadas." },
+      "lifestyle": { "title": "Lifestyle Fitness", "desc": "Fitness en la vida real. Sin ser esclavo del gym." }
+    }
+  },
+  "social": {
+    "label": "Redes",
+    "title": "SIGUE A",
+    "titleHighlight": "MR. TREINO",
+    "p": "Elige tu plataforma. Únete a la comunidad.",
+    "youtube": { "desc": "Vídeos completos. Entrenamiento, nutrición, suplementos.", "cta": "Suscríbete" },
+    "instagram": { "desc": "Tips rápidos. Bastidores. Cada día.", "cta": "Seguir" },
+    "tiktok": { "desc": "Entrenamiento en 60 segundos. Directo al grano.", "cta": "Seguir" }
+  },
+  "contact": {
+    "badge": "100% Gratis",
+    "title": "¿LISTO PARA",
+    "titleHighlight": "EMPEZAR?",
+    "p": "Suscríbete al canal. Contenido cada semana. Cero rollo.",
+    "cta": "SUSCRÍBETE EN YOUTUBE"
+  },
+  "footer": {
+    "tagline": "Entrenamiento, Nutrición & Motivación — Sin rollo, con ciencia.",
+    "copyright": "Todos los derechos reservados.",
+    "cta": "Vamos."
+  }
+}

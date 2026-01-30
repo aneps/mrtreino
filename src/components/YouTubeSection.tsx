@@ -2,16 +2,21 @@
 
 import { motion } from 'framer-motion'
 import { Youtube, Play, Bell, ThumbsUp, Users } from 'lucide-react'
+import { useTranslation, Trans } from 'react-i18next'
 import mrTreinoBench from '../assets/mr-treino-bench.png'
 import { URLS } from '../lib/constants'
 
-const stats = [
-  { icon: Users, value: 'Crescendo!', label: 'Comunidade' },
-  { icon: Play, value: 'Toda Semana', label: 'Novos Vídeos' },
-  { icon: ThumbsUp, value: '100%', label: 'Gratuito' },
-]
+const STAT_KEYS = ['community', 'videos', 'free'] as const
+const STAT_VALUE_KEYS = ['growing', 'weekly', 'percent'] as const
+const STAT_ICONS = [Users, Play, ThumbsUp]
 
 export function YouTubeSection() {
+  const { t } = useTranslation()
+  const stats = STAT_KEYS.map((labelKey, i) => ({
+    icon: STAT_ICONS[i],
+    value: t(`youtube.statsValue.${STAT_VALUE_KEYS[i]}`),
+    label: t(`youtube.stats.${labelKey}`),
+  }))
   return (
     <section id="conteúdo" className="relative py-16 sm:py-20 lg:py-24 bg-black overflow-hidden">
       {/* Background */}
@@ -28,17 +33,17 @@ export function YouTubeSection() {
             <div className="inline-flex items-center gap-2 bg-fitness-red/20 border border-fitness-red/50 rounded-full px-4 py-2 mb-6">
               <Youtube className="w-5 h-5 text-fitness-red" />
               <span className="text-fitness-red font-semibold text-sm uppercase tracking-wider">
-                Onde Tudo Rola
+                {t('youtube.badge')}
               </span>
             </div>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[0.95] mb-4 sm:mb-6">
-              ASSISTA NO<br />
-              <span className="text-fitness-red">YOUTUBE</span>
+              {t('youtube.title')}<br />
+              <span className="text-fitness-red">{t('youtube.titleHighlight')}</span>
             </h2>
             
             <p className="text-base sm:text-lg md:text-xl text-white/70 mb-6 sm:mb-8 leading-relaxed">
-              Vídeos completos: treino, nutrição, suplementação. Tudo <strong className="text-white">grátis</strong>.
+              <Trans i18nKey="youtube.p" components={{ strong: <strong className="text-white" /> }} />
             </p>
 
             {/* Stats */}
@@ -70,7 +75,7 @@ export function YouTubeSection() {
                 className="bg-fitness-red text-white font-bold text-sm sm:text-lg px-5 py-3 sm:px-8 sm:py-4 rounded-full hover:bg-red-600 transition-all flex items-center gap-2 sm:gap-3 shadow-2xl shadow-red-500/30"
               >
                 <Youtube className="w-6 h-6" />
-                INSCREVA-SE AGORA
+                {t('youtube.subscribe')}
               </motion.a>
               
               <motion.a
@@ -82,7 +87,7 @@ export function YouTubeSection() {
                 className="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white font-bold text-sm sm:text-lg px-5 py-3 sm:px-8 sm:py-4 rounded-full hover:bg-white/20 transition-all flex items-center gap-2 sm:gap-3"
               >
                 <Bell className="w-5 h-5" />
-                ATIVAR NOTIFICAÇÕES
+                {t('youtube.notifications')}
               </motion.a>
             </div>
           </motion.div>
@@ -121,9 +126,9 @@ export function YouTubeSection() {
                 </div>
                 <div>
                   <h3 className="font-bold text-white text-lg mb-1">
-                    Como Treinar para Ganhar Massa Muscular
+                    {t('youtube.videoTitle')}
                   </h3>
-                  <p className="text-white/60 text-sm">Mr. Treino • Novo vídeo toda semana</p>
+                  <p className="text-white/60 text-sm">{t('youtube.videoSubtitle')}</p>
                 </div>
               </div>
             </div>

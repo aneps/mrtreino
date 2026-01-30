@@ -2,9 +2,11 @@
 
 import { motion } from 'framer-motion'
 import { Zap, Target, Heart } from 'lucide-react'
+import { useTranslation, Trans } from 'react-i18next'
 import mrTreinoTreinar from '../assets/mr-treino-treinar.png'
 
 export function TreinarSection() {
+  const { t } = useTranslation()
   return (
     <section id="treinar" className="relative py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-black to-zinc-900 overflow-hidden">
       {/* Background Pattern */}
@@ -41,33 +43,32 @@ export function TreinarSection() {
             className="order-1 lg:order-2"
           >
             <span className="text-fitness-red font-bold text-sm uppercase tracking-widest mb-4 block">
-              A Mentalidade
+              {t('treinar.label')}
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[0.95] mb-4 sm:mb-6">
-              TREINAR!<br />
-              <span className="text-fitness-red">É A RESPOSTA</span>
+              {t('treinar.title')}<br />
+              <span className="text-fitness-red">{t('treinar.titleHighlight')}</span>
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-white/70 mb-6 sm:mb-8 leading-relaxed">
-              Dia ruim, desculpa, preguiça — <strong className="text-white">treinar</strong> é o que te move. 
-              Força e disposição vêm da consistência, não do céu.
+              <Trans i18nKey="treinar.p1" components={{ strong: <strong className="text-white" /> }} />
             </p>
             <p className="text-sm sm:text-base md:text-lg text-white/60 mb-8 sm:mb-10 leading-relaxed">
-              Cada sessão conta. Cada repetição. Cada escolha.
+              {t('treinar.p2')}
             </p>
 
             {/* Highlights */}
             <div className="flex flex-wrap gap-4">
               <div className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-xl px-4 py-3">
                 <Zap className="w-5 h-5 text-fitness-red flex-shrink-0" />
-                <span className="text-white font-semibold text-sm">Energia</span>
+                <span className="text-white font-semibold text-sm">{t('treinar.energy')}</span>
               </div>
               <div className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-xl px-4 py-3">
                 <Target className="w-5 h-5 text-fitness-red flex-shrink-0" />
-                <span className="text-white font-semibold text-sm">Foco</span>
+                <span className="text-white font-semibold text-sm">{t('treinar.focus')}</span>
               </div>
               <div className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-xl px-4 py-3">
                 <Heart className="w-5 h-5 text-fitness-red flex-shrink-0" />
-                <span className="text-white font-semibold text-sm">Saúde</span>
+                <span className="text-white font-semibold text-sm">{t('treinar.health')}</span>
               </div>
             </div>
           </motion.div>

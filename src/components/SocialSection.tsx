@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Youtube, Instagram, ArrowUpRight } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import mrTreinoLogo from '../assets/mr-treino-logo.png'
 import { URLS, SOCIAL_HANDLE } from '../lib/constants'
 
@@ -12,37 +13,28 @@ const TikTokIcon = ({ className }: { className?: string }) => (
   </svg>
 )
 
-const socials = [
-  {
-    name: 'YouTube',
-    icon: Youtube,
-    description: 'Vídeos completos. Treino, nutrição, suplementação.',
-    cta: 'Inscreva-se',
-    href: URLS.youtube,
-    gradient: 'from-red-600 to-red-500',
-    hoverBg: 'hover:bg-red-600/20',
-  },
-  {
-    name: 'Instagram',
-    icon: Instagram,
-    description: 'Dicas rápidas. Bastidores. Todo dia.',
-    cta: 'Seguir',
-    href: URLS.instagram,
-    gradient: 'from-purple-500 via-pink-500 to-orange-500',
-    hoverBg: 'hover:bg-pink-500/20',
-  },
-  {
-    name: 'TikTok',
-    icon: TikTokIcon,
-    description: 'Treino em 60 segundos. Direto ao ponto.',
-    cta: 'Seguir',
-    href: URLS.tiktok,
-    gradient: 'from-cyan-400 via-white to-pink-500',
-    hoverBg: 'hover:bg-white/20',
-  },
+const SOCIAL_KEYS = ['youtube', 'instagram', 'tiktok'] as const
+const SOCIAL_ICONS = [Youtube, Instagram, TikTokIcon]
+const SOCIAL_GRADIENTS = [
+  'from-red-600 to-red-500',
+  'from-purple-500 via-pink-500 to-orange-500',
+  'from-cyan-400 via-white to-pink-500',
 ]
+const SOCIAL_HOVER = ['hover:bg-red-600/20', 'hover:bg-pink-500/20', 'hover:bg-white/20']
+const SOCIAL_HREFS = [URLS.youtube, URLS.instagram, URLS.tiktok]
+const SOCIAL_NAMES = ['YouTube', 'Instagram', 'TikTok']
 
 export function SocialSection() {
+  const { t } = useTranslation()
+  const socials = SOCIAL_KEYS.map((key, i) => ({
+    name: SOCIAL_NAMES[i],
+    icon: SOCIAL_ICONS[i],
+    description: t(`social.${key}.desc`),
+    cta: t(`social.${key}.cta`),
+    href: SOCIAL_HREFS[i],
+    gradient: SOCIAL_GRADIENTS[i],
+    hoverBg: SOCIAL_HOVER[i],
+  }))
   return (
     <section id="redes" className="relative py-24 bg-gradient-to-b from-black to-zinc-900 overflow-hidden">
       {/* Background Elements */}
@@ -57,14 +49,14 @@ export function SocialSection() {
           className="text-center mb-16"
         >
           <span className="text-fitness-red font-bold text-sm uppercase tracking-widest mb-4 block">
-            Redes
+            {t('social.label')}
           </span>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-[0.95] mb-6">
-            SIGA O<br />
-            <span className="text-fitness-red">MR. TREINO</span>
+            {t('social.title')}<br />
+            <span className="text-fitness-red">{t('social.titleHighlight')}</span>
           </h2>
           <p className="text-xl text-white/70 max-w-2xl mx-auto">
-            Escolhe a plataforma. Entra na comunidade.
+            {t('social.p')}
           </p>
         </motion.div>
 

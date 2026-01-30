@@ -1,6 +1,7 @@
 'use client'
 
 import { Youtube, Instagram } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import mrTreinoLogo from '../assets/mr-treino-logo.png'
 import { URLS } from '../lib/constants'
 
@@ -12,6 +13,7 @@ const TikTokIcon = ({ className }: { className?: string }) => (
 )
 
 export function FooterFitness() {
+  const { t } = useTranslation()
   return (
     <footer className="bg-black border-t border-white/10 py-12">
       <div className="container mx-auto px-6 sm:px-8 lg:px-12">
@@ -24,7 +26,7 @@ export function FooterFitness() {
 
           {/* Tagline */}
           <p className="text-white/60 text-center">
-            Treino, Nutrição & Motivação — Sem frescura, com ciência.
+            {t('footer.tagline')}
           </p>
 
           {/* Social Icons */}
@@ -59,8 +61,8 @@ export function FooterFitness() {
         {/* Copyright */}
         <div className="mt-8 pt-8 border-t border-white/10 text-center">
           <p className="text-white/40 text-sm">
-            © {new Date().getFullYear()} Mr. Treino. Todos os direitos reservados. 
-            <span className="text-fitness-red ml-2">💪 Bora.</span>
+            © {new Date().getFullYear()} Mr. Treino. {t('footer.copyright')}{' '}
+            <span className="text-fitness-red ml-2">💪 {t('footer.cta')}</span>
           </p>
         </div>
       </div>

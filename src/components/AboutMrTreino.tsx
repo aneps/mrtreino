@@ -2,32 +2,19 @@
 
 import { motion } from 'framer-motion'
 import { Heart, Target, Users, Sparkles } from 'lucide-react'
+import { useTranslation, Trans } from 'react-i18next'
 import mrTreinoPointing from '../assets/mr-treino-pointing.png'
 
-const values = [
-  {
-    icon: Heart,
-    title: 'Sem Extremismos',
-    description: 'Estilo de vida, não obsessão. Equilíbrio.',
-  },
-  {
-    icon: Target,
-    title: 'Baseado em Ciência',
-    description: 'Ciência, não achismo.',
-  },
-  {
-    icon: Users,
-    title: 'Para Todos',
-    description: 'Iniciante ou avançado, todo mundo entra.',
-  },
-  {
-    icon: Sparkles,
-    title: 'Sem Frescura',
-    description: 'Direto ao ponto. Sem enrolação.',
-  },
-]
+const VALUE_KEYS = ['noExtremes', 'science', 'forAll', 'noFluff'] as const
+const VALUE_ICONS = [Heart, Target, Users, Sparkles]
 
 export function AboutMrTreino() {
+  const { t } = useTranslation()
+  const values = VALUE_KEYS.map((key, i) => ({
+    icon: VALUE_ICONS[i],
+    title: t(`about.values.${key}.title`),
+    description: t(`about.values.${key}.desc`),
+  }))
   return (
     <section id="sobre" className="relative py-16 sm:py-20 lg:py-24 bg-black overflow-hidden">
       {/* Background Pattern */}
@@ -65,18 +52,17 @@ export function AboutMrTreino() {
             viewport={{ once: true }}
           >
             <span className="text-fitness-red font-bold text-sm uppercase tracking-widest mb-4 block">
-              Quem é o Mr. Treino?
+              {t('about.label')}
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[0.95] mb-4 sm:mb-6">
-              SEU COACH DE<br />
-              <span className="text-fitness-red">BOLSO</span>
+              {t('about.title')}<br />
+              <span className="text-fitness-red">{t('about.titleHighlight')}</span>
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-white/70 mb-6 sm:mb-8 leading-relaxed">
-              Canal de fitness: <strong className="text-white">treino, nutrição, suplementação</strong>. 
-              Conteúdo que presta, sem papo furado.
+              <Trans i18nKey="about.p1" components={{ strong: <strong className="text-white" /> }} />
             </p>
             <p className="text-sm sm:text-base md:text-lg text-white/60 mb-8 sm:mb-10 leading-relaxed">
-              Sem promessa milagrosa. Sem dieta maluca. Só o que funciona pra você evoluir de verdade.
+              {t('about.p2')}
             </p>
 
             {/* Values Grid */}

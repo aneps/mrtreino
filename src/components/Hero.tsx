@@ -3,8 +3,10 @@
 import { motion } from 'framer-motion'
 import { Menu, X, Youtube, Instagram, Volume2, VolumeX } from 'lucide-react'
 import { useState, useRef, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import mrTreinoLogo from '../assets/mr-treino-logo.png'
 import { URLS } from '../lib/constants'
+import { SUPPORTED_LANGUAGES, type SupportedLocale } from '../i18n'
 
 // TikTok icon component
 const TikTokIcon = ({ className }: { className?: string }) => (
@@ -13,13 +15,34 @@ const TikTokIcon = ({ className }: { className?: string }) => (
   </svg>
 )
 
+const NAV_SECTIONS: { id: string; key: string }[] = [
+  { id: 'sobre', key: 'nav.sobre' },
+  { id: 'conteúdo', key: 'nav.conteudo' },
+  { id: 'treinar', key: 'nav.treinar' },
+  { id: 'aprenda', key: 'nav.aprenda' },
+  { id: 'redes', key: 'nav.redes' },
+]
+
 export function Hero() {
+  const { t, i18n } = useTranslation()
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isLanguageOpen, setIsLanguageOpen] = useState(false)
   const [isVideoLoaded, setIsVideoLoaded] = useState(false)
   const [isMuted, setIsMuted] = useState(true)
   const videoRef = useRef<HTMLVideoElement>(null)
   const audioRef = useRef<HTMLAudioElement>(null)
+  const langMenuRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (langMenuRef.current && !langMenuRef.current.contains(e.target as Node)) {
+        setIsLanguageOpen(false)
+      }
+    }
+    document.addEventListener('click', handleClickOutside)
+    return () => document.removeEventListener('click', handleClickOutside)
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,6 +80,11 @@ export function Hero() {
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
     setIsMobileMenuOpen(false)
+  }
+
+  const setLanguage = (lng: SupportedLocale) => {
+    i18n.changeLanguage(lng)
+    setIsLanguageOpen(false)
   }
 
   return (
@@ -135,23 +163,55 @@ export function Hero() {
 
             {/* Desktop Nav */}
             <div className="hidden md:flex items-center gap-8">
-              {['Sobre', 'Conteúdo', 'Treinar', 'Aprenda', 'Redes'].map((item) => (
+              {NAV_SECTIONS.map(({ id, key }) => (
                 <button
-                  key={item}
-                  onClick={() => scrollToSection(item.toLowerCase())}
+                  key={id}
+                  onClick={() => scrollToSection(id)}
                   className="text-white/90 hover:text-white font-semibold uppercase tracking-wide text-sm transition-colors"
                 >
-                  {item}
+                  {t(key)}
                 </button>
               ))}
             </div>
 
             {/* Right Side */}
             <div className="flex items-center gap-3">
+              <div className="relative" ref={langMenuRef}>
+                <button
+                  onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+                  className="p-3 rounded-full bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 transition-all text-xl leading-none"
+                  aria-label={t('ariaLanguage')}
+                  title={t('language')}
+                >
+                  {SUPPORTED_LANGUAGES.find((l) => l.code === i18n.language)?.flag ?? '🇧🇷'}
+                </button>
+                {isLanguageOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="absolute right-0 top-full mt-2 py-2 w-40 bg-black/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-xl z-[200]"
+                  >
+                    {SUPPORTED_LANGUAGES.map(({ code, label, flag }) => (
+                      <button
+                        key={code}
+                        onClick={() => setLanguage(code)}
+                        className={`w-full px-4 py-2.5 text-left text-sm font-medium transition-colors flex items-center gap-2 ${
+                          i18n.language === code
+                            ? 'text-fitness-red bg-white/10'
+                            : 'text-white/90 hover:text-white hover:bg-white/5'
+                        }`}
+                      >
+                        <span className="text-lg">{flag}</span>
+                        {label}
+                      </button>
+                    ))}
+                  </motion.div>
+                )}
+              </div>
               <button
                 onClick={() => setIsMuted(!isMuted)}
                 className="p-3 rounded-full bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 transition-all"
-                aria-label={isMuted ? 'Ativar som' : 'Desativar som'}
+                aria-label={isMuted ? t('hero.ariaSoundOn') : t('hero.ariaSoundOff')}
               >
                 {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
               </button>
@@ -164,7 +224,7 @@ export function Hero() {
                 className="hidden sm:flex items-center gap-2 bg-fitness-red text-white font-bold px-6 py-3 rounded-full hover:bg-red-600 transition-all"
               >
                 <Youtube className="w-5 h-5" />
-                INSCREVA-SE
+                {t('nav.inscrevaSe')}
               </motion.a>
 
               <button
@@ -194,13 +254,13 @@ export function Hero() {
             className="fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl z-[105] p-8"
           >
             <div className="flex flex-col gap-6 mt-20">
-              {['Sobre', 'Conteúdo', 'Treinar', 'Aprenda', 'Redes'].map((item) => (
+              {NAV_SECTIONS.map(({ id, key }) => (
                 <button
-                  key={item}
-                  onClick={() => scrollToSection(item.toLowerCase())}
+                  key={id}
+                  onClick={() => scrollToSection(id)}
                   className="text-white text-xl font-bold uppercase tracking-wide text-left py-3 border-b border-white/10"
                 >
-                  {item}
+                  {t(key)}
                 </button>
               ))}
               <a
@@ -210,7 +270,7 @@ export function Hero() {
                 className="bg-fitness-red text-white font-bold px-6 py-4 rounded-full mt-4 text-center flex items-center justify-center gap-2"
               >
                 <Youtube className="w-5 h-5" />
-                INSCREVA-SE
+                {t('nav.inscrevaSe')}
               </a>
             </div>
           </motion.div>
@@ -241,13 +301,13 @@ export function Hero() {
 
             {/* Main Title - smaller on mobile */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white leading-[0.9] mb-4 sm:mb-6">
-              <span className="block">TREINO,</span>
-              <span className="block">NUTRIÇÃO &</span>
-              <span className="block text-fitness-red">MOTIVAÇÃO</span>
+              <span className="block">{t('hero.title1')}</span>
+              <span className="block">{t('hero.title2')}</span>
+              <span className="block text-fitness-red">{t('hero.title3')}</span>
             </h1>
 
             <p className="text-base sm:text-xl md:text-2xl text-white/80 max-w-xl mb-6 sm:mb-8 leading-relaxed">
-              Treino, nutrição e motivação. Direto, sem enrolação.
+              {t('hero.subtitle')}
             </p>
 
             {/* Social CTA Buttons - smaller on mobile */}
@@ -261,7 +321,7 @@ export function Hero() {
                 className="bg-fitness-red text-white font-bold text-sm sm:text-lg px-5 py-3 sm:px-8 sm:py-4 rounded-full hover:bg-red-600 transition-all flex items-center gap-2 sm:gap-3 shadow-2xl shadow-red-500/30"
               >
                 <Youtube className="w-5 h-5 sm:w-6 sm:h-6" />
-                ASSISTA NO YOUTUBE
+                {t('hero.watchYouTube')}
               </motion.a>
               
               <motion.a

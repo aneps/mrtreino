@@ -2,10 +2,12 @@
 
 import { motion } from 'framer-motion'
 import { Youtube, Sparkles } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import mrTreinoLogo from '../assets/mr-treino-logo.png'
 import { URLS } from '../lib/constants'
 
 export function ContactFitness() {
+  const { t } = useTranslation()
   return (
     <section className="relative py-24 bg-gradient-to-b from-zinc-900 to-black overflow-hidden">
       {/* Background Elements */}
@@ -36,16 +38,16 @@ export function ContactFitness() {
             <div className="inline-flex items-center gap-2 bg-fitness-red/20 border border-fitness-red/50 rounded-full px-4 py-2 mb-6">
               <Sparkles className="w-4 h-4 text-fitness-red" />
               <span className="text-fitness-red font-semibold text-sm uppercase tracking-wider">
-                100% Gratuito
+                {t('contact.badge')}
               </span>
             </div>
 
             <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-[0.95] mb-6">
-              BORA<br />
-              <span className="text-fitness-red">COMEÇAR?</span>
+              {t('contact.title')}<br />
+              <span className="text-fitness-red">{t('contact.titleHighlight')}</span>
             </h2>
             <p className="text-xl text-white/70 max-w-2xl mx-auto mb-12">
-              Inscreve no canal. Conteúdo toda semana. Zero frescura.
+              {t('contact.p')}
             </p>
           </motion.div>
 
@@ -64,7 +66,7 @@ export function ContactFitness() {
               className="inline-flex items-center gap-3 bg-fitness-red text-white font-bold text-xl px-10 py-5 rounded-full hover:bg-red-600 transition-all shadow-2xl shadow-fitness-red/30"
             >
               <Youtube className="w-7 h-7" />
-              INSCREVA-SE NO YOUTUBE
+              {t('contact.cta')}
             </motion.a>
           </motion.div>
         </div>
